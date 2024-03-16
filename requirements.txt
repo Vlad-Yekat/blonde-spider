@@ -12,4 +12,6 @@ pydantic == 2.6.1
 python-multipart == 0.0.9
 uvicorn == 0.27.1
 
+# TEST
+pytest == 8.1.1
 
