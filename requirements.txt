@@ -1,7 +1,15 @@
+# GUI
 #  fastui == 0.5.2  сырая еще, без доков итп, лучше flet
-fastapi == 0.109.2
-uvicorn == 0.27.1
-python-multipart == 0.0.9
-sqlalchemy == 2.0.27
 # flet == 0.20.2  flutter сомнительно
 flask == 3.0.2  # все по-старинке
+
+# DATA
+sqlalchemy == 2.0.27
+
+# MODELS
+fastapi == 0.109.2
+pydantic == 2.6.1
+python-multipart == 0.0.9
+uvicorn == 0.27.1
+
+

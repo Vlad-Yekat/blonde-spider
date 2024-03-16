@@ -25,21 +25,21 @@ def get_one_fixture(id: int) -> Spider | None:
     return None
 
 
-def create_spider(spider: Spider) -> Spider:
+def create_fixture(spider: Spider) -> Spider:
     """Add a spider"""
     return spider
 
 
-def modify_spider(spider: Spider) -> Spider:
+def modify_fixture(spider: Spider) -> Spider:
     """Partially modify a spider"""
     return spider
 
 
-def replace_spider(spider: Spider) -> Spider:
+def replace_fixture(spider: Spider) -> Spider:
     """Completely replace a spider"""
     return spider
 
 
-def delete_spider(name: str):
+def delete_fixture(name: str):
     """Delete a spider; return None if it existed"""
     return None

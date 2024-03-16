@@ -3,9 +3,9 @@ import asyncio
 from fastapi import FastAPI, Body
 from pydantic import BaseModel
 from fastapi import APIRouter
-from api.models import Spider
-from api.service import create_spider
-from api.fixtures.spiders import get_one, get_all
+from api.models.spiders import Spider
+# from api.service import create_spider
+from api.fixtures.spiders import get_one_fixture, get_all_fixtures
 
 app = FastAPI()
 
@@ -46,17 +46,17 @@ async def greet(who:str = Body(embed=True)):
 @app.get('/spiders/{spider_id}', response_model=Spider)
 async def get_one(spider_id: int) -> Spider:
     # tag: Spider = service.get(tag_str)
-    one_spider = get_one(spider_id)
+    one_spider = get_one_fixture(spider_id)
     return one_spider
 
 @app.get('/spiders/')
 async def get_all_spiders() -> list[Spider]:
-    list_of_spiders = get_all()
+    list_of_spiders = get_all_fixtures()
     return list_of_spiders
 
-@app.post("/")
-async def post_spider(spider: Spider) -> Spider:
-    return create_spider(spider)
+# @app.post("/")
+# async def post_spider(spider: Spider) -> Spider:
+#     return create_spider(spider)
 
 
 if __name__ == "__main__":

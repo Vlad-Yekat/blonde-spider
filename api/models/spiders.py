@@ -10,9 +10,9 @@ class Url(BaseModel):
 
 
 class Spider(BaseModel):
-    id: int = None
+    id: int = None  # in pydantic 2 we must use None as default
     code: str = None
     name: str = None
     tag: str = None
-    urls: List[Url]
+    urls: List[Url] = None
 
